@@ -87,7 +87,7 @@ def price_evolution(sneakers_number: int):
                 plt.ylabel('Price (SEK)')
                 plt.grid(linestyle = '--', linewidth = 0.5)
                 plt.show()
-            except:
-                print('The data does not exist')
+            except FileNotFoundError as error:
+                print(f'{error}}')
         else:
             print('The number of the sneakers should be in range ' + str(len(df.iloc[:, -1])))
