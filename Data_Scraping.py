@@ -75,4 +75,4 @@ def price_evolution(sneakers_number: int):
         else:
             print('The number of the sneakers should be in range ' + str(len(df.iloc[:, -1])))
     except FileNotFoundError as error:
-        print(f'{error}')
+        print(f'FileNotFoundError: {error}')
